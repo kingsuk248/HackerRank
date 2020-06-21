@@ -20,6 +20,8 @@ public class LinkedListApp {
 			intList.add(scanner.nextInt());
 		}
 		scanner.close();
+		LinkedListApp app = new LinkedListApp();
+		app.operateOnSinglyLinkedList(intList);
 	}
 
 	public void operateOnSinglyLinkedList(List<Integer> intList) {
@@ -27,7 +29,8 @@ public class LinkedListApp {
 			SinglyLinkedList.insertElements(i);
 		}
 		SinglyLinkedList.printLinkedList(SinglyLinkedList.head);
-		SinglyLinkedList.reverseLinkedList(SinglyLinkedList.head);
+		//SinglyLinkedList.reverseLinkedList(SinglyLinkedList.head);
+		SinglyLinkedList.removeDuplicates(SinglyLinkedList.head);
 		SinglyLinkedList.printLinkedList(SinglyLinkedList.head);
 	}
 }

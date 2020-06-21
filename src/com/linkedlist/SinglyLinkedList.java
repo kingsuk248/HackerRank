@@ -39,4 +39,18 @@ public class SinglyLinkedList {
 		}
 		head = prevNode;
 	}
+
+	public static void removeDuplicates(Node headNode) {
+		Node currentNode = headNode;
+		Node nextNode = null;
+		while (currentNode != null) {
+			nextNode = currentNode.next;
+			while (nextNode != null && currentNode.iData == nextNode.iData) {
+				nextNode = nextNode.next;
+			}
+			currentNode.next = nextNode;
+			currentNode = nextNode;
+		}
+		
+	}
 }
